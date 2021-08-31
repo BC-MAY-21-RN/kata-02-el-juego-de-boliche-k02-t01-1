@@ -17,8 +17,10 @@
     "url": "https://github.com/BC-MAY-21-RN/kata-02-el-juego-de-boliche-k02-t01-1/issues"
   },
   "homepage": "https://github.com/BC-MAY-21-RN/kata-02-el-juego-de-boliche-k02-t01-1#readme",
-  "dependencies": {
-    "eslint": "^7.32.0"
-  },
-  "devDependencies": {}
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.2",
+    "jest": "^27.1.0"
+  }
 }

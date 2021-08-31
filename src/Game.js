@@ -1,4 +1,6 @@
-const { Round } = require("./Round.js");
+/* eslint-disable class-methods-use-this */
+/* eslint-disable no-plusplus */
+const { Round } = require('./Round');
 
 class Game {
   constructor() {
@@ -10,7 +12,7 @@ class Game {
     for (let rounds = 1; rounds < 3; rounds++) {
       const round = new Round();
       for (let trieds = 0; trieds < 2; trieds++) {
-        let maxValue = round.firstTrie === -1 ? 10 : 10 - round.firstTrie;
+        const maxValue = round.firstTrie === -1 ? 10 : 10 - round.firstTrie;
         round.setTrieValue(this.generateRoundValue(0, maxValue));
       }
       this.game.push({
@@ -26,10 +28,8 @@ class Game {
 
   printGame() {
     for (let index = 0; index < this.game.length; index++) {
-      console.log(
-        this.game[index].rounds,
-        this.game[index].round.getFullRound()
-      );
+      // eslint-disable-next-line no-console
+      console.log(this.game[index].rounds, this.game[index].round.getFullRound());
     }
   }
 }

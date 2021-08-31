@@ -12,12 +12,10 @@ class Round {
   setTriedValue(value) {
     if (this.firstTried === -1) {
       this.firstTried = value;
+    } else if (this.firstTried === 10) {
+      this.secondTried = 0;
     } else {
-      if (this.firstTried === 10) {
-        this.secondTried = 0;
-      } else {
-        this.secondTried = value;
-      }
+      this.secondTried = value;
     }
   }
 
