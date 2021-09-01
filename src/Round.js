@@ -1,4 +1,4 @@
-class Round {
+module.exports = class Round {
   constructor(firstTried = -1, secondTried = -1) {
     this.firstTried = firstTried;
     this.secondTried = secondTried;
@@ -17,10 +17,12 @@ class Round {
     } else {
       this.secondTried = value;
     }
+    return this.firstTried;
   }
 
   isStrike(bonus) {
     this.roundValue = bonus + 10;
+    return this.roundValue;
   }
 
   getRound() {
@@ -37,8 +39,5 @@ class Round {
       roundValue: this.getRoundValue(),
     };
   }
+// eslint-disable-next-line semi
 }
-
-module.exports = {
-  Round,
-};
